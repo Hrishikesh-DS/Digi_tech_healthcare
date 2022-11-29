@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patient_navigation"
+    app:startDestination="@id/navigationFragment">
+
+    <fragment
+        android:id="@+id/patientProfileFragment"
+        android:name="com.example.digi_tech_healthcare.PatientData.PatientProfileFragment"
+        android:label="fragment_patient_profile"
+        tools:layout="@layout/fragment_patient_profile" >
+        <action
+            android:id="@+id/action_patientProfileFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_patientProfileFragment_to_logoutFragment"
+            app:destination="@id/logoutFragment" />
+        <action
+            android:id="@+id/action_patientProfileFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.digi_tech_healthcare.DoctorData.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_reportFragment_to_patientProfileFragment"
+            app:destination="@id/patientProfileFragment" />
+        <action
+            android:id="@+id/action_reportFragment_to_logoutFragment"
+            app:destination="@id/logoutFragment" />
+        <action
+            android:id="@+id/action_reportFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoutFragment"
+        android:name="com.example.digi_tech_healthcare.MainData.LogoutFragment"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" >
+        <action
+            android:id="@+id/action_logoutFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.example.digi_tech_healthcare.ContentManager.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" >
+        <action
+            android:id="@+id/action_informationFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_patientProfileFragment"
+            app:destination="@id/patientProfileFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_logoutFragment"
+            app:destination="@id/logoutFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_informationDetailsFragment"
+            app:destination="@id/informationDetailsFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_addInformationFragment"
+            app:destination="@id/addInformationFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationDetailsFragment"
+        android:name="com.example.digi_tech_healthcare.ContentManager.InformationDetailsFragment"
+        android:label="fragment_information_details"
+        tools:layout="@layout/fragment_information_details" >
+        <action
+            android:id="@+id/action_informationDetailsFragment_to_addInformationFragment"
+            app:destination="@id/addInformationFragment" />
+        <argument
+            android:name="id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="image"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="desc"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="role"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addInformationFragment"
+        android:name="com.example.digi_tech_healthcare.ContentManager.AddInformationFragment"
+        android:label="fragment_add_information"
+        tools:layout="@layout/fragment_add_information" >
+        <argument
+            android:name="id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="image"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="desc"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="role"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.example.digi_tech_healthcare.DoctorData.DoctorFragment"
+        android:label="fragment_doctor"
+        tools:layout="@layout/fragment_doctor" >
+        <action
+            android:id="@+id/action_doctorFragment_to_patientInfoFragment"
+            app:destination="@id/patientInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientInfoFragment"
+        android:name="com.example.digi_tech_healthcare.PatientData.PatientInfoFragment"
+        android:label="fragment_patient_info"
+        tools:layout="@layout/fragment_patient_info" >
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="doc"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="image"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="age"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="fam"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="med"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="role"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_patientInfoFragment_to_patientReportFragment"
+            app:destination="@id/patientReportFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.example.digi_tech_healthcare.MainData.NavigationFragment"
+        android:label="fragment_navigation"
+        tools:layout="@layout/fragment_navigation" >
+        <action
+            android:id="@+id/action_navigationFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_navigationFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientReportFragment"
+        android:name="com.example.digi_tech_healthcare.PatientData.PatientReportFragment"
+        android:label="fragment_patient_report"
+        tools:layout="@layout/fragment_patient_report" >
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+</navigation>

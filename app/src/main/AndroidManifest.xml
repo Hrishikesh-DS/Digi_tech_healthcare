@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.digi_tech_healthcare">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +16,10 @@
         android:theme="@style/Theme.Digi_tech_healthcare"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainData.PatientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainData.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".BaseClasses.BaseActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

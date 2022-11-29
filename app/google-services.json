@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1048324287255",
+    "project_id": "digitech-e654d",
+    "storage_bucket": "digitech-e654d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048324287255:android:e13c82d48473cf246ce552",
+        "android_client_info": {
+          "package_name": "com.example.digi_tech_healthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048324287255-v94gkqaq34f9dp7isepisbn8k1tegfur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaB9npcIOO3nToyt0_-gGBHehWpYRnK9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048324287255-v94gkqaq34f9dp7isepisbn8k1tegfur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
